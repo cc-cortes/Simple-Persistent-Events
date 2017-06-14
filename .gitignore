@@ -3,3 +3,7 @@
 ################################################################################
 
 /TestApp/bin
+/TestApp/obj
+/PersistentEvents/bin
+/PersistentEvents/obj
+/PersistentEvents/bin

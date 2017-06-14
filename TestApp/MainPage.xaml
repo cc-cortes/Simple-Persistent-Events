@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="TestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <StackPanel>
+                <StackPanel x:Name="UnsupportedBuildPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                    <TextBlock TextWrapping="Wrap" Text="This build does not support Persistent Events"></TextBlock>
+                </StackPanel>
+                <Grid x:Name="ContentGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Persistent Event" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Margin="5" TextAlignment="Center" />
+                    <TextBlock Text="Is Registered?" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap"  Margin="5" TextAlignment="Center" />
+                    <TextBlock Text="Register" Grid.Row="0" Grid.Column="2" TextWrapping="Wrap" Margin="5" TextAlignment="Center" />
+                    <TextBlock Text="Unregister" Grid.Row="0" Grid.Column="3" TextWrapping="Wrap"  Margin="5" TextAlignment="Center" />
+
+                    <TextBlock Text="Time Zone Change" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Margin="5" TextAlignment="Center" />
+                    <TextBlock x:Name="TimeZoneChangeRegistered" Text="No" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Margin="5" TextAlignment="Center" />
+                    <Button Grid.Row="1" Grid.Column="2" Margin="5" Click="Register_TimeZoneChange">Register</Button>
+                    <Button Grid.Row="1" Grid.Column="3" Margin="5" Click="Unregister_TimeZoneChange">Unregister</Button>
+
+
+                    <TextBlock Text="User Present" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap"  Margin="5" TextAlignment="Center" />
+                    <TextBlock x:Name="UserPresentRegistered" Text="No" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Margin="5" TextAlignment="Center"  />
+                    <Button Grid.Row="2" Grid.Column="2" Margin="5" Click="Register_UserPresent">Register</Button>
+                    <Button Grid.Row="2" Grid.Column="3" Margin="5" Click="Unregister_UserPresent">Unregister</Button>
+
+                    <TextBlock Text="User Away" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"  Margin="5" TextAlignment="Center" />
+                    <TextBlock x:Name="UserAwayRegistered" Text="No" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Margin="5" TextAlignment="Center"  />
+                    <Button Grid.Row="3" Grid.Column="2" Margin="5" Click="Register_UserAway">Register</Button>
+                    <Button Grid.Row="3" Grid.Column="3" Margin="5" Click="Unregister_UserAway">Unregister</Button>
+
+                    <TextBlock Text="Maintenance Window" Grid.Row="4" Grid.Column="0" TextWrapping="Wrap"  Margin="5" TextAlignment="Center" />
+                    <TextBlock x:Name="MaintenanceWindowRegistered" Text="No" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Margin="5" TextAlignment="Center"  />
+                    <Button Grid.Row="4" Grid.Column="2" Margin="5" Click="Register_MaintenanceWindow">Register</Button>
+                    <Button Grid.Row="4" Grid.Column="3" Margin="5" Click="Unregister_MaintenanceWindow">Unregister</Button>
+
+                </Grid>
+            </StackPanel>
+            
+        </ScrollViewer>
+
+    </Grid>
+</Page>
