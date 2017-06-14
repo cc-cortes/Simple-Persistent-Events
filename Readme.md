@@ -65,6 +65,3 @@ You can also find more helpers for background tasks in the [UWP Community Toolki
 | --- | --- |
 | Namespace | Microsoft.Toolkit.Uwp |
 
-## API
-
-* [Persistent Events source code](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp/Helpers/PersistentEvents)
